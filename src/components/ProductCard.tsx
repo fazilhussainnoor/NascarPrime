@@ -48,7 +48,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             ))}
           </div>
           <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
-            {product.reviewCount}/{product.totalPossibleReviews} Reviews
+            {product.rating} | {product.reviewCount} Reviews
           </span>
         </div>
 

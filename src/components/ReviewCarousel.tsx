@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { Star, ChevronLeft, ChevronRight, Quote, BadgeCheck } from 'lucide-react';
 import { reviewData } from '../constants/reviewData';
 
 const ReviewCarousel: React.FC = () => {
@@ -48,16 +48,27 @@ const ReviewCarousel: React.FC = () => {
   return (
     <section className="py-24 bg-gray-50 overflow-hidden relative">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 space-y-4">
+        <div className="text-center mb-16 space-y-6">
+          {/* Certified Badge */}
+          <div className="flex items-center justify-center gap-1 text-[#28a745] font-black uppercase tracking-[0.2em] text-[10px] md:text-xs">
+            <BadgeCheck className="w-4 h-4 md:w-5 h-5 fill-current text-[#28a745]" />
+            Certified Reviews
+          </div>
+
           <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-none">
             Real Reviews <br />
             <span className="text-red-600">From Real Customers</span>
           </h2>
-          <div className="flex justify-center items-center gap-1 text-[#FFD700]">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-5 h-5 fill-current" />
-            ))}
-            <span className="ml-2 text-black font-black text-sm">5.0 RATING</span>
+          
+          <div className="flex flex-col items-center gap-2">
+            <div className="flex justify-center items-center gap-1 text-[#FFD700]">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 fill-current" />
+              ))}
+            </div>
+            <div className="text-black font-black text-sm uppercase tracking-widest">
+              349K Reviews | 4.6 Star Rating
+            </div>
           </div>
         </div>
 
