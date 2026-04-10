@@ -41,12 +41,12 @@ export default function Header() {
         <div className="hidden lg:flex items-center gap-6">
           {/* Currency Selector */}
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
+            <DropdownMenuTrigger render={
               <Button variant="ghost" size="sm" className="gap-2 font-medium text-xs">
                 <Globe className="w-4 h-4" />
                 {currency}
               </Button>
-            </DropdownMenuTrigger>
+            } />
             <DropdownMenuContent align="end">
               <DropdownMenuItem onClick={() => setCurrency("PKR")}>PKR - Pakistan</DropdownMenuItem>
               <DropdownMenuItem onClick={() => setCurrency("USD")}>USD - US Dollar</DropdownMenuItem>
