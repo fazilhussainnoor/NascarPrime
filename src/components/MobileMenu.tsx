@@ -35,10 +35,8 @@ export default function MobileMenu() {
 
   return (
     <Sheet>
-      <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="lg:hidden">
-          <Menu className="w-6 h-6" />
-        </Button>
+      <SheetTrigger render={<Button variant="ghost" size="icon" className="lg:hidden" />}>
+        <Menu className="w-6 h-6" />
       </SheetTrigger>
       <SheetContent side="left" className="w-[300px] p-0 flex flex-col">
         <SheetHeader className="p-4 border-b border-gray-100">
@@ -102,15 +100,15 @@ export default function MobileMenu() {
         <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-4">
           <div className="flex items-center justify-between">
             <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="w-full justify-between text-xs font-bold">
-                  <div className="flex items-center gap-2">
-                    <Globe className="w-4 h-4" />
-                    CURRENCY: {currency}
-                  </div>
-                  <ChevronDown className="w-4 h-4 opacity-50" />
-                </Button>
-              </DropdownMenuTrigger>
+              <DropdownMenuTrigger render={<Button variant="outline" size="sm" className="w-full justify-between text-xs font-bold" />}>
+              <div className="flex items-center justify-between w-full">
+                <div className="flex items-center gap-2">
+                  <Globe className="w-4 h-4" />
+                  CURRENCY: {currency}
+                </div>
+                <ChevronDown className="w-4 h-4 opacity-50" />
+              </div>
+            </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-[268px]">
                 <DropdownMenuItem onClick={() => setCurrency("PKR")}>PKR - Pakistan</DropdownMenuItem>
                 <DropdownMenuItem onClick={() => setCurrency("USD")}>USD - US Dollar</DropdownMenuItem>
