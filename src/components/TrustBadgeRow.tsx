@@ -1,27 +1,47 @@
 import React from 'react';
-import { Truck, RotateCcw, ShieldCheck, ShoppingBag, Percent } from 'lucide-react';
+import { Truck, RotateCcw, ShieldCheck, Zap } from 'lucide-react';
 
 const TrustBadgeRow: React.FC = () => {
   const badges = [
-    { icon: <Truck className="w-5 h-5" />, label: 'Free Shipping' },
-    { icon: <RotateCcw className="w-5 h-5" />, label: 'Easy Returns' },
-    { icon: <ShieldCheck className="w-5 h-5" />, label: '100% Genuine' },
-    { icon: <ShoppingBag className="w-5 h-5" />, label: 'Top Seller on Amazon' },
-    { icon: <Percent className="w-5 h-5" />, label: 'Unbeatable Savings' }
+    { 
+      icon: <Truck className="w-6 h-6" />, 
+      title: 'Free Shipping',
+      description: 'Enjoy free shipping on all prepaid orders'
+    },
+    { 
+      icon: <RotateCcw className="w-6 h-6" />, 
+      title: 'Easy Returns & Exchanges',
+      description: 'Unused items can be returned or exchanged for a full refund'
+    },
+    { 
+      icon: <ShieldCheck className="w-6 h-6" />, 
+      title: '100% Genuine',
+      description: 'No fakes, no first copies. Only original brands'
+    },
+    { 
+      icon: <Zap className="w-6 h-6" />, 
+      title: 'Unbeatable Savings',
+      description: 'Factory prices that nobody else can beat'
+    }
   ];
 
   return (
-    <div className="bg-white border-y border-gray-100 py-10">
+    <div className="bg-gray-50 border-y border-gray-100 py-16">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-center md:justify-between items-center gap-8 md:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {badges.map((badge, index) => (
-            <div key={index} className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
+            <div key={index} className="flex flex-col items-center text-center space-y-4 group">
+              <div className="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-400 group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
                 {badge.icon}
               </div>
-              <span className="text-[10px] md:text-xs font-black uppercase tracking-widest text-gray-500 group-hover:text-black transition-colors">
-                {badge.label}
-              </span>
+              <div className="space-y-1">
+                <h3 className="text-sm font-black uppercase tracking-widest text-black group-hover:text-red-600 transition-colors">
+                  {badge.title}
+                </h3>
+                <p className="text-xs text-gray-500 max-w-[200px] leading-relaxed mx-auto">
+                  {badge.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
