@@ -13,6 +13,7 @@ export const navigationData: NavItem[] = [
       { title: "Men", href: "/new-arrivals/men" },
       { title: "Women", href: "/new-arrivals/women" },
       { title: "Kids", href: "/new-arrivals/kids" },
+      { title: "Bamboo Collection", href: "/new-arrivals/bamboo" },
     ],
   },
   {

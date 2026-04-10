@@ -6,6 +6,9 @@
 import TopBar from "./components/TopBar";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
+import PromotionalBanner from "./components/PromotionalBanner";
+import Hero from "./components/Hero";
+import CategoryGrid from "./components/CategoryGrid";
 
 export default function App() {
   return (
@@ -15,103 +18,92 @@ export default function App() {
         <TopBar />
         <Header />
         <Navigation />
+        <PromotionalBanner />
       </div>
 
-      {/* Main Content Placeholder */}
-      <main className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto space-y-12">
-          <section className="text-center space-y-4">
-            <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase">
-              Premium Quality <br />
-              <span className="text-red-600">Nascar Prime</span>
-            </h1>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-              Shop the best deals on Men, Women, and Kids apparel. High-quality export surplus at unbeatable prices from Nascar Prime.
-            </p>
-          </section>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="aspect-[4/5] bg-gray-100 rounded-2xl flex items-center justify-center overflow-hidden relative group cursor-pointer">
-              <img 
-                src="https://picsum.photos/seed/men/800/1000" 
-                alt="Men's Collection" 
-                className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors" />
-              <div className="absolute bottom-8 left-8">
-                <h2 className="text-white text-3xl font-bold uppercase tracking-tighter">Men's Collection</h2>
-                <button className="mt-2 text-white text-sm font-bold underline underline-offset-4 uppercase tracking-widest">Shop Now</button>
+      {/* Main Content Sections */}
+      <main>
+        <Hero />
+        <CategoryGrid />
+        
+        {/* Features Section */}
+        <section className="py-20 text-center bg-gray-50 border-y border-gray-100">
+          <div className="container mx-auto px-4">
+            <h3 className="text-sm font-black uppercase tracking-[0.3em] text-gray-400 mb-12">The Nascar Prime Promise</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
+              <div className="space-y-4 group">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto shadow-sm group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div className="text-xl font-black uppercase tracking-tighter">FAST SHIPPING</div>
+                <p className="text-sm text-gray-500 max-w-xs mx-auto">Quick delivery across Pakistan in 2-4 business days.</p>
               </div>
-            </div>
-            <div className="aspect-[4/5] bg-gray-100 rounded-2xl flex items-center justify-center overflow-hidden relative group cursor-pointer">
-              <img 
-                src="https://picsum.photos/seed/women/800/1000" 
-                alt="Women's Collection" 
-                className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors" />
-              <div className="absolute bottom-8 left-8">
-                <h2 className="text-white text-3xl font-bold uppercase tracking-tighter">Women's Collection</h2>
-                <button className="mt-2 text-white text-sm font-bold underline underline-offset-4 uppercase tracking-widest">Shop Now</button>
+              <div className="space-y-4 group">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto shadow-sm group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div className="text-xl font-black uppercase tracking-tighter">PREMIUM QUALITY</div>
+                <p className="text-sm text-gray-500 max-w-xs mx-auto">Hand-picked export quality guaranteed for every item.</p>
+              </div>
+              <div className="space-y-4 group">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto shadow-sm group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 15v-1a4 4 0 00-4-4H8m0 0l3 3m-3-3l3-3m9 14V5a2 2 0 00-2-2H6a2 2 0 00-2 2v16l4-2 4 2 4-2 4 2z" />
+                  </svg>
+                </div>
+                <div className="text-xl font-black uppercase tracking-tighter">EASY RETURNS</div>
+                <p className="text-sm text-gray-500 max-w-xs mx-auto">7-day hassle-free returns if you're not satisfied.</p>
               </div>
             </div>
           </div>
-
-          <section className="py-20 text-center border-y border-gray-100">
-            <h3 className="text-sm font-bold uppercase tracking-[0.3em] text-gray-400 mb-4">Why Choose Us?</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
-              <div className="space-y-2">
-                <div className="text-2xl font-black">FAST SHIPPING</div>
-                <p className="text-sm text-gray-500">Quick delivery across Pakistan</p>
-              </div>
-              <div className="space-y-2">
-                <div className="text-2xl font-black">PREMIUM QUALITY</div>
-                <p className="text-sm text-gray-500">Export quality guaranteed</p>
-              </div>
-              <div className="space-y-2">
-                <div className="text-2xl font-black">EASY RETURNS</div>
-                <p className="text-sm text-gray-500">7-day hassle-free returns</p>
-              </div>
-            </div>
-          </section>
-        </div>
+        </section>
       </main>
 
       {/* Footer Section */}
-      <footer className="bg-gray-50 border-t border-gray-100 py-16 mt-20">
+      <footer className="bg-gray-950 text-white py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-            <div className="space-y-4">
-              <span className="text-lg font-black tracking-tighter text-black uppercase">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+            <div className="space-y-6 col-span-1 md:col-span-2">
+              <span className="text-2xl font-black tracking-tighter uppercase">
                 NASCAR<span className="text-red-600">PRIME</span>
               </span>
-              <p className="text-sm text-gray-500 max-w-xs mx-auto md:mx-0">
-                Nascar Prime is your premier destination for high-quality export surplus and premium apparel. Thank you for choosing us for your fashion needs.
+              <p className="text-gray-400 text-sm max-w-md leading-relaxed">
+                Nascar Prime is your premier destination for high-quality export surplus and premium apparel. We bring you the world's best fashion brands at unbeatable prices.
               </p>
+              <div className="flex justify-center md:justify-start gap-4">
+                <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
+                  <span className="sr-only">Facebook</span>
+                  {/* Icon */}
+                </a>
+              </div>
             </div>
             
-            <div className="space-y-4">
-              <h4 className="text-sm font-bold uppercase tracking-widest">Contact Us</h4>
-              <p className="text-sm text-gray-500">
-                Nascar Prime<br />
+            <div className="space-y-6">
+              <h4 className="text-sm font-black uppercase tracking-widest text-red-500">Contact Us</h4>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                Nascar Prime Store<br />
                 11 KM Satiana Road<br />
                 Faisalabad, Pakistan
               </p>
             </div>
 
-            <div className="space-y-4">
-              <h4 className="text-sm font-bold uppercase tracking-widest">Follow Us</h4>
-              <div className="flex justify-center md:justify-start gap-4 text-sm text-gray-500">
-                <a href="#" className="hover:text-red-600 transition-colors">@nascarprime.shoponline</a>
-              </div>
+            <div className="space-y-6">
+              <h4 className="text-sm font-black uppercase tracking-widest text-red-500">Legal</h4>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Refund Policy</a></li>
+              </ul>
             </div>
           </div>
 
-          <div className="mt-16 pt-8 border-t border-gray-200 text-center">
-            <p className="text-xs text-gray-400 uppercase tracking-widest">
-              © 2026, Nascar Prime. All rights reserved.
+          <div className="mt-16 pt-8 border-t border-white/10 text-center">
+            <p className="text-[10px] text-gray-500 uppercase font-bold tracking-[0.3em]">
+              © 2026 Nascar Prime. All rights reserved. Designed for Excellence.
             </p>
           </div>
         </div>
