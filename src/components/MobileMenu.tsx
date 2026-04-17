@@ -25,7 +25,7 @@ import {
 
 export default function MobileMenu() {
   const [openItems, setOpenItems] = useState<string[]>([]);
-  const [currency, setCurrency] = useState("PKR");
+  const [currency, setCurrency] = useState("USD");
 
   const toggleItem = (title: string) => {
     setOpenItems((prev) =>
@@ -41,9 +41,14 @@ export default function MobileMenu() {
       <SheetContent side="left" className="w-[300px] p-0 flex flex-col">
         <SheetHeader className="p-4 border-b border-gray-100">
           <SheetTitle className="text-left">
-            <span className="text-xl font-black tracking-tighter text-black uppercase">
-              NASCAR<span className="text-red-600">PRIME</span>
-            </span>
+            <a href="/" className="flex flex-col items-start group" aria-label="Nascar Prime - Genuine Quality & Unbeatable Savings">
+              <span className="text-2xl font-black tracking-tighter uppercase text-[#dc2626] leading-none">
+                NASCAR PRIME
+              </span>
+              <span className="text-[10px] text-gray-500 font-bold tracking-wider uppercase mt-1 group-hover:text-gray-900 transition-colors">
+                Big Brands, Small Prices
+              </span>
+            </a>
           </SheetTitle>
         </SheetHeader>
 

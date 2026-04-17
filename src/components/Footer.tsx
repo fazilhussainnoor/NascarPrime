@@ -9,9 +9,14 @@ const Footer: React.FC = () => {
           {/* Brand and Info */}
           <div className="space-y-8 col-span-1 md:col-span-1 lg:col-span-1">
             <div className="flex flex-col gap-4">
-              <span className="text-3xl font-black tracking-tighter uppercase">
-                NASCAR<span className="text-red-600">PRIME</span>
-              </span>
+              <a href="/" className="flex flex-col items-start group inline-flex" aria-label="Nascar Prime - Genuine Quality & Unbeatable Savings">
+                <span className="text-3xl font-black tracking-tighter uppercase text-[#dc2626] leading-none">
+                  NASCAR PRIME
+                </span>
+                <span className="text-xs text-gray-500 font-bold tracking-wider uppercase mt-1 group-hover:text-white transition-colors">
+                  Big Brands, Small Prices
+                </span>
+              </a>
               <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
                 Your premier destination for high-quality export surplus and premium apparel. Quality you can trust.
               </p>
@@ -45,8 +50,18 @@ const Footer: React.FC = () => {
             </ul>
             
             <div className="pt-4 space-y-4">
+              <div className="mb-6">
+                <a href="/" className="flex flex-col items-start group inline-flex" aria-label="Nascar Prime - Genuine Quality & Unbeatable Savings">
+                  <span className="text-xl font-black tracking-tighter uppercase text-[#dc2626] leading-none">
+                    NASCAR PRIME
+                  </span>
+                  <span className="text-[10px] text-gray-500 font-bold tracking-wider uppercase mt-1 group-hover:text-white transition-colors">
+                    Big Brands, Small Prices
+                  </span>
+                </a>
+              </div>
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-red-600 shrink-0" />
+                <MapPin className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
                 <address className="not-italic text-xs text-gray-500 leading-relaxed uppercase font-bold tracking-tight">
                   Nascar Prime, 11 KM Satiana Road, <br />
                   Faisalabad, Pakistan

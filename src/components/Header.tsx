@@ -18,7 +18,7 @@ import MobileMenu from "./MobileMenu";
 
 export default function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [currency, setCurrency] = useState("PKR");
+  const [currency, setCurrency] = useState("USD");
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-100 shadow-sm">
@@ -30,9 +30,12 @@ export default function Header() {
 
         {/* Logo */}
         <div className="flex-shrink-0">
-          <a href="/" className="flex items-center gap-2">
-            <span className="text-xl sm:text-2xl font-black tracking-tighter text-black uppercase">
-              NASCAR<span className="text-red-600">PRIME</span>
+          <a href="/" className="flex flex-col items-start group" aria-label="Nascar Prime - Genuine Quality & Unbeatable Savings">
+            <span className="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-[#dc2626] leading-none">
+              NASCAR PRIME
+            </span>
+            <span className="text-[10px] sm:text-xs text-gray-500 font-bold tracking-wider uppercase mt-1 group-hover:text-gray-900 transition-colors">
+              Big Brands, Small Prices
             </span>
           </a>
         </div>
