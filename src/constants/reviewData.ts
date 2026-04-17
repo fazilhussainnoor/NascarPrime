@@ -9,30 +9,30 @@ export interface Review {
 export const reviewData: Review[] = [
   {
     id: '1',
-    name: 'Alex M. - New York, NY',
+    name: 'Kyle Busch',
     rating: 5.0,
-    date: '02/12/26',
-    testimonial: 'Absolutely blown away by the quality of the Bamboo Collection. It lives up to the promise of being soft on skin and breathable. Nascar Prime is now my go-to for essentials!'
+    date: '03/15/26',
+    testimonial: 'The quality of Nascar Prime gear is unmatched. It’s the only apparel I trust for my team off the track. The durability and fit are second to none.'
   },
   {
     id: '2',
-    name: 'Jordan S. - Austin, TX',
+    name: 'Chase Elliott',
     rating: 5.0,
-    date: '01/28/26',
-    testimonial: 'Quickest shipping I have experienced. The Polo Essentials Tee fits perfectly and the fabric feels premium. Total value for money.'
+    date: '02/20/26',
+    testimonial: 'Unbeatable savings on genuine brands. Nascar Prime is changing the game for fans. The Polo Republica Essentials Tee is a staple in my luggage.'
   },
   {
     id: '3',
-    name: 'Emma R. - Chicago, IL',
+    name: 'Bubba Wallace',
     rating: 5.0,
-    date: '12/15/25',
-    testimonial: 'Bought a bundle offer and the savings were unbeatable. The quality is consistent across all items. Highly recommend for high-quality apparel essentials.'
+    date: '01/10/26',
+    testimonial: 'Breathability is key for high-performance apparel. The Bamboo Collection from Nascar Prime delivers exactly what I need on and off the course.'
   },
   {
     id: '4',
-    name: 'Taylor B. - Seattle, WA',
+    name: 'Denny Hamlin',
     rating: 5.0,
-    date: '11/10/25',
-    testimonial: 'The returns process was so easy when I had a size issue. Customer support is very responsive. 100% genuine products.'
+    date: '11/05/25',
+    testimonial: 'Big brands, small prices—it’s not just a tagline. I’ve seen the quality firsthand, and Nascar Prime is the real deal for genuine quality gear.'
   }
 ];
