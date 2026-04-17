@@ -51,8 +51,8 @@ export default function Header() {
               </Button>
             } />
             <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => setCurrency("PKR")}>PKR - Pakistan</DropdownMenuItem>
               <DropdownMenuItem onClick={() => setCurrency("USD")}>USD - US Dollar</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setCurrency("CAD")}>CAD - Canadian Dollar</DropdownMenuItem>
               <DropdownMenuItem onClick={() => setCurrency("GBP")}>GBP - British Pound</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

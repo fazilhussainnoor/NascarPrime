@@ -11,9 +11,9 @@ export default function TopBar() {
       <motion.p
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-[10px] sm:text-xs font-medium tracking-widest uppercase"
+        className="text-[10px] sm:text-xs font-black tracking-[0.2em] uppercase"
       >
-        FREE SHIPPING ON PREPAID ORDER
+        FREE SHIPPING ON ALL US ORDERS OVER $50
       </motion.p>
     </div>
   );

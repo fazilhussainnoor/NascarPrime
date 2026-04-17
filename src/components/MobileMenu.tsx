@@ -115,8 +115,8 @@ export default function MobileMenu() {
               </div>
             </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-[268px]">
-                <DropdownMenuItem onClick={() => setCurrency("PKR")}>PKR - Pakistan</DropdownMenuItem>
                 <DropdownMenuItem onClick={() => setCurrency("USD")}>USD - US Dollar</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setCurrency("CAD")}>CAD - Canadian Dollar</DropdownMenuItem>
                 <DropdownMenuItem onClick={() => setCurrency("GBP")}>GBP - British Pound</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>

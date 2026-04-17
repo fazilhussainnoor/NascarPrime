@@ -9,30 +9,30 @@ export interface Review {
 export const reviewData: Review[] = [
   {
     id: '1',
-    name: 'awab a.',
+    name: 'Alex M. - New York, NY',
     rating: 5.0,
-    date: 'February 12, 2026',
+    date: '02/12/26',
     testimonial: 'Absolutely blown away by the quality of the Bamboo Collection. It lives up to the promise of being soft on skin and breathable. Nascar Prime is now my go-to for essentials!'
   },
   {
     id: '2',
-    name: 'Malik A.',
+    name: 'Jordan S. - Austin, TX',
     rating: 5.0,
-    date: 'January 28, 2026',
-    testimonial: 'Quickest shipping I have experienced in Pakistan. The Polo Essentials Tee fits perfectly and the fabric feels premium. Total value for money.'
+    date: '01/28/26',
+    testimonial: 'Quickest shipping I have experienced. The Polo Essentials Tee fits perfectly and the fabric feels premium. Total value for money.'
   },
   {
     id: '3',
-    name: 'Zahra K.',
+    name: 'Emma R. - Chicago, IL',
     rating: 5.0,
-    date: 'December 15, 2025',
-    testimonial: 'Bought a bundle offer and the savings were unbeatable. The quality is consistent across all items. Highly recommend for high-quality export surplus.'
+    date: '12/15/25',
+    testimonial: 'Bought a bundle offer and the savings were unbeatable. The quality is consistent across all items. Highly recommend for high-quality apparel essentials.'
   },
   {
     id: '4',
-    name: 'Sardar U.',
+    name: 'Taylor B. - Seattle, WA',
     rating: 5.0,
-    date: 'November 10, 2025',
+    date: '11/10/25',
     testimonial: 'The returns process was so easy when I had a size issue. Customer support is very responsive. 100% genuine products.'
   }
 ];
